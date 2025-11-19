@@ -90,7 +90,8 @@ export default defineConfig({
 		optimizeDeps: {
 			exclude: ["@resvg/resvg-js"],
 		},
-		plugins: [tailwind(), rawFonts([".ttf", ".woff"])],
+		// @ts-expect-error
+    plugins: [tailwind(), rawFonts([".ttf", ".woff"])],
 	},
 	env: {
 		schema: {
