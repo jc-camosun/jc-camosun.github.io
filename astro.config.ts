@@ -34,7 +34,7 @@ export default defineConfig({
 		webmanifest({
 			// See: https://github.com/alextim/astro-lib/blob/main/packages/astro-webmanifest/README.md
 			name: siteConfig.title,
-			short_name: "Astro_Cactus", // optional
+			//short_name: "Astro_Cactus", // optional
 			description: siteConfig.description,
 			lang: siteConfig.lang,
 			icon: "public/cam_logo.svg", // the source for generating favicon & icons
