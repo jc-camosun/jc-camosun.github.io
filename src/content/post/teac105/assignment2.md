@@ -1,7 +1,7 @@
 ---
 title: "TEAC 105 Assignment 2 Solution"
 description: "This is the solution to Assignment 2!"
-publishDate: "18 Nov 2025"
+publishDate: "20 Nov 2025"
 tags: ["teac105", "assignment 2"]
 pinned: true
 ---
@@ -28,11 +28,11 @@ pinned: true
 //let x = [ 10, 200 ];
 //let y = [ 200, 10 ];
 
-// xand y for the Emojis!
+// x and y for the Emojis!
 let x = [-4, 180, 377];
 let y = [397, 22, 399];
-let size = 25;
-let diameter = 20;
+let size = 25; // for the Emojis
+
 let directionX = [];
 let directionY = [];
 let speedX = [];
@@ -150,5 +150,25 @@ function draw() {
 function drawEmoji(emoji, x, y) {
   textSize(size);
   text(emoji, x, y);
+}
+
+function smileyFaceMaker(x, y) {
+  let diameter = 20;  // for the Smiley Face
+  let sf = diameter / 100;
+  
+  // The fill() function stays in effect&nbsp;
+  // until the next call to fill().
+  fill("yellow");
+  
+  circle(x, y, diameter);
+
+  fill("black");
+  circle(x - 20 * sf, y - 20 * sf, 20 * sf);
+  circle(x + 20 * sf, y - 20 * sf, 20 * sf);
+  // angles are measured in radians, if you want
+  // to use degrees, use the radians() function
+  // to convert.
+  //arc(200, 210, 60, 50, 0, radians(180), CHORD);
+  arc(x + 0 * sf, y + 10 * sf, 60 * sf, 50 * sf, 0, PI, CHORD);
 }
 ```
